@@ -1,0 +1,27 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+        // Indentation with 2 spaces
+        "indent": ["error", 2],
+    
+        // Use single quotes for strings
+        "quotes": ["error", "single"],
+    
+        // Semicolons at the end of statements
+        "semi": ["error", "always"],
+    
+        // No unused variables
+        "no-unused-vars": ["error", { "vars": "all", "args": "none" }],
+    
+        // Require curly braces for control flow statements
+        "curly": ["error", "all"]
+      }
+}

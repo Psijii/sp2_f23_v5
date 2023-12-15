@@ -17,7 +17,7 @@ html, body {
 body {
   font-family: 'Libre Franklin', sans-serif;
   color: $dark;
-  background-color: $dark;;
+  background-color: $dark;
 }
 
 i {
@@ -46,6 +46,9 @@ a, .a {
   text-decoration: underline;
   cursor: pointer;
   &:hover {
+    color: $white;
+  }
+  &.back {
     color: $white;
   }
 }
@@ -104,24 +107,26 @@ a, .a {
   padding: 8px;
   justify-content: space-between;
   transition: 0.2s;
+  background-color: $dark;
+  border: 1px solid $primary;
 
   // Card title styles
   &__title {
     margin: 8px 0 4px 0;
     font-size: 21px;
     overflow: hidden;
-
+    color: $white;
   }
 
   // Card time styles
   &__time {
-    color: $secondary;
+    color: $white;
     margin: 0 0 28px 0;
   }
 
   // Card price styles
   &__price {
-    color: $primary;
+    color: $secondary;
     font-size: 21px;
   }
 

@@ -1,7 +1,7 @@
 {
-  "name": "sp2_autumn_2023",
-  "version": "2.5.0",
-  "description": "Semester project 2 for Noroff FED.",
+  "name": "sp2_f23_v5",
+  "version": "5.4.0",
+  "description": "Noroff SP2, FED, version 5",
   "main": "index.js",
   "dependencies": {
     "accepts": "^1.3.8",
@@ -162,16 +162,17 @@
     "websocket-driver": "^0.7.4",
     "websocket-extensions": "^0.1.4"
   },
+  "devDependencies": {
+    "eslint": "^8.55.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sass src/scss:dist/css",
-    "watch": "sass --watch src/scss:dist/css & live-server"
+    "watch": "sass --watch src/scss:dist/css & live-server",
+      "lint": "eslint .",
+      "lint-fix": "eslint . --fix"
   },
-  "keywords": [
-    "sp2",
-    "noroff",
-    "fed"
-  ],
+  "keywords": ["sp2, fed, noroff, version 5"],
   "author": "Siw Elin Årolilja Iversen",
   "license": "ISC"
 }

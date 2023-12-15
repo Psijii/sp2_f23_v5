@@ -11979,7 +11979,7 @@ textarea.form-control-lg {
 }
 
 .price {
-  color: rgb(42, 55, 99);
+  color: #e5a037;
   font-size: 21px;
 }
 
@@ -23982,6 +23982,9 @@ a, .a {
 a:hover, .a:hover {
   color: #ededed;
 }
+a.back, .a.back {
+  color: #ededed;
+}
 
 .navbar-dark {
   background-color: #010924;
@@ -24027,18 +24030,21 @@ a:hover, .a:hover {
   padding: 8px;
   justify-content: space-between;
   transition: 0.2s;
+  background-color: #010924;
+  border: 1px solid rgb(42, 55, 99);
 }
 .card__title {
   margin: 8px 0 4px 0;
   font-size: 21px;
   overflow: hidden;
+  color: #ededed;
 }
 .card__time {
-  color: #e5a037;
+  color: #ededed;
   margin: 0 0 28px 0;
 }
 .card__price {
-  color: rgb(42, 55, 99);
+  color: #e5a037;
   font-size: 21px;
 }
 .card img {
