@@ -1,0 +1,168 @@
+// Import statements
+@use "_auth";
+@use "_product";
+@use "_profile";
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin');
+
+@import "_variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Base styles
+html, body {
+  height: 100vh;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  color: $dark;
+  background-color: $dark;;
+}
+
+i {
+  color: $secondary;
+}
+
+// Logo styles
+.logo {
+  font-family: "Libre Barcode 39 Text";
+  font-size: 50px;
+  color: $white;
+  }
+
+
+// Responsive typography
+@media (max-width: 767px) {
+  h1, .h1 { font-size: 50px; }
+  h2, .h2 { font-size: 37px; }
+  h3, .h3 { font-size: 28px; }
+  h4, .h4 { font-size: 21px; }
+}
+
+// Link styles
+a, .a {
+  color: $secondary;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    color: $white;
+  }
+}
+
+
+// Navbar styles
+.navbar-dark {
+  background-color: $dark;
+  a {
+    color: $white;
+  }
+
+  // Navbar brand styles
+  .navbar-brand {
+    margin-right: 67px;
+  }
+
+  // Nav item styles
+  .nav-item {
+    font-size: 18px;
+    a {
+      font-style: normal;
+    }
+  }
+}
+
+// Hero section styles
+.hero {
+  display: flex;
+  align-items: center;
+  background-image: url("../../assets/img/hero.webp");
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  max-height: 50vh;
+  min-height: 320px;
+  color: $white;
+
+  // Hero center styles
+  .hero-center {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    // Responsive padding
+    @include media-breakpoint-down(xl) {
+      padding-left: 1rem;
+    }
+  }
+}
+
+// Card styles
+.card {
+  color: inherit;
+  text-decoration: none;
+  padding: 8px;
+  justify-content: space-between;
+  transition: 0.2s;
+
+  // Card title styles
+  &__title {
+    margin: 8px 0 4px 0;
+    font-size: 21px;
+    overflow: hidden;
+
+  }
+
+  // Card time styles
+  &__time {
+    color: $secondary;
+    margin: 0 0 28px 0;
+  }
+
+  // Card price styles
+  &__price {
+    color: $primary;
+    font-size: 21px;
+  }
+
+  // Image styles
+  img {
+    margin-bottom: 8px;
+    border-radius: var(--bs-card-border-radius);
+    max-height: 200px;
+    align-self: center;
+    max-width: 100%;
+  }
+}
+
+// Main content styles
+main {
+  flex: 1;
+  padding-bottom: 20px;
+  color: $white;
+}
+
+footer {
+  color: $white;
+}
+
+// Listings container styles
+.listings-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+}
+
+// Search row styles
+.search-row {
+  // Responsive layout for small screens
+  @include media-breakpoint-down(sm) {
+    flex-direction: column-reverse;
+
+    // Margin adjustment for first child column
+    .col:first-child {
+      margin-top: 1rem;
+    }
+  }
+}

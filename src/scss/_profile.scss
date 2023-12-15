@@ -1,0 +1,45 @@
+// Profile container styles
+.profile-container {
+  max-width: 400px;
+  margin: 0 auto; // Use 'auto' for centering
+}
+
+.img-thumbnail {
+  max-width: 200px; 
+}
+
+// Profile listings styles
+.profile-listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 1rem;
+  justify-content: center;
+}
+
+// Profile main styles
+.profile-main {
+  .container {
+    max-width: 900px; 
+  }
+}
+
+// Edit avatar styles
+.edit-avatar-close {
+  display: block;
+  text-align: end;
+}
+
+.edit-avatar-modal,
+.create-listing-modal {
+  max-width: 350px; 
+}
+
+// Create listing modal styles
+.create-listing-modal {
+  max-width: 600px; 
+}
+
+// Added media container styles
+.added-media-container {
+  overflow-wrap: anywhere;
+}

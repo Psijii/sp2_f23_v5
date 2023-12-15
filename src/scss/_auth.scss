@@ -1,0 +1,60 @@
+
+
+// Sign-in form styles
+.form-signin {
+  max-width: 400px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+// Login styles
+.login {
+  & .email {
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+  }
+
+  & .password {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: 0;
+  }
+}
+
+// Register styles
+.register {
+  & .user-name {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  & .email {
+    margin-bottom: -1px;
+    border-radius: 0;
+  }
+
+  & .password {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  & .repeat-password {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+// Profile head styles
+.profile-head {
+  transform: translateY(3rem);
+}
+
