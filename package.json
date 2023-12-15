@@ -83,7 +83,7 @@
     "isarray": "^1.0.0",
     "isobject": "^3.0.1",
     "kind-of": "^6.0.3",
-    "live-server": "^1.2.2",
+    "live-server": "^1.1.0",
     "map-cache": "^0.2.2",
     "map-stream": "^0.1.0",
     "map-visit": "^1.0.0",
@@ -163,16 +163,38 @@
     "websocket-extensions": "^0.1.4"
   },
   "devDependencies": {
-    "eslint": "^8.55.0"
+    "eslint": "^8.55.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1"
   },
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sass src/scss:dist/css",
     "watch": "sass --watch src/scss:dist/css & live-server",
-      "lint": "eslint .",
-      "lint-fix": "eslint . --fix"
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "format": "prettier --write 'src/**/*.js'",
+    "check-format": "prettier --check 'src/**/*.js'"
   },
-  "keywords": ["sp2, fed, noroff, version 5"],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+        "eslint --fix",
+        "prettier --write"
+      ]
+    },
+  "keywords": [
+    "sp2, fed, noroff, version 5"
+  ],
   "author": "Siw Elin Årolilja Iversen",
   "license": "ISC"
+}
 }
