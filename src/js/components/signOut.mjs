@@ -6,10 +6,10 @@
  * // Logs out the user and reloads the page
  * logOut();
  */
- export const logOut = () => {
+export const logOut = () => {
   // Clear user data from local storage
   localStorage.clear();
-  
+
   // Reload the page to reflect the logged-out state
   location.reload();
 };

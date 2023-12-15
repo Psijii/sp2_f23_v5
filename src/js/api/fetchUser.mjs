@@ -1,4 +1,4 @@
-import { apiCall, options } from './index.js';
+import { apiCall, options } from "./index.js";
 
 /**
  * Retrieves user information, including listings, from the API.

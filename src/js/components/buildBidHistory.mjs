@@ -27,5 +27,5 @@ export const bidHistory = (bids) => {
        */
       return `<p class="mt-1">${bidderName} (${amount} Nkr.)</p>`;
     })
-    .join('');
+    .join("");
 };

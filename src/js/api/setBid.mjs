@@ -1,7 +1,4 @@
-import { 
-  apiCall, 
-  options 
-} from './index.js';
+import { apiCall, options } from "./index.js";
 
 /**
  * Places a bid on a specific listing using a POST request to the specified API endpoint.
@@ -28,7 +25,7 @@ export const placeBid = async (body, id) => {
    * The HTTP method for the bid placement request.
    * @type {string}
    */
-  const method = 'post';
+  const method = "post";
 
   /**
    * Sends a POST request to place a bid on the specified listing.

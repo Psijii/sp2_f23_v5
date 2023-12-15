@@ -1,4 +1,4 @@
-import { timeLeft } from './timeLeft.mjs';
+import { timeLeft } from "./timeLeft.mjs";
 
 /**
  * Creates HTML markup for a card representing a listing.
@@ -29,7 +29,7 @@ export const createCard = (listing) => {
   const currentBid = bids.length ? bids[bids.length - 1].amount : 0;
 
   // Use loremflicker URL as a fallback if there are no media images
-  const image = media.length ? media[0] : 'https://loremflickr.com/300/300';
+  const image = media.length ? media[0] : "https://loremflickr.com/300/300";
 
   return `
     <a href="/product.html?id=${id}" class="card slide">

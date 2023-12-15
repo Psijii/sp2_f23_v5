@@ -1,10 +1,11 @@
-import { errorHtml, setLoader } from '../components/index.js';
-import { getError } from '../storage/index.js';
+import { errorHtml, setLoader } from "../components/index.js";
+import { getError } from "../storage/index.js";
 
-const form = document.querySelector('form');
-const signalContainer = document.querySelector('.signal');
-
-form.onsubmit = async (e) => {
+/**
+ * Handles the form submission event.
+ * @param {Event} e - The form submission event.
+ */
+const handleSubmit = async (e) => {
   e.preventDefault();
 
   const form = e.target;
@@ -16,15 +17,25 @@ form.onsubmit = async (e) => {
     delete profile.avatar;
   }
 
-
+  // Display loader while processing the form
   signalContainer.innerHTML = setLoader();
 
   try {
-    location.assign('login.html');
+    // Redirect to the login page after successful submission
+    location.assign("login.html");
   } catch (error) {
+    // Handle errors and display error message
     const { errors } = getError();
     signalContainer.innerHTML = errorHtml(errors[0].message);
     console.log(error);
-    localStorage.removeItem('error');
+    localStorage.removeItem("error");
   }
 };
+
+// Select the form element
+const form = document.querySelector("form");
+// Select the signal container element
+const signalContainer = document.querySelector(".signal");
+
+// Attach the form submission handler
+form.onsubmit = handleSubmit;

@@ -8,6 +8,6 @@
  * @param {number} user.wins - The number of wins the user has.
  * @returns {void} - No return value.
  */
- export const storeUser = (user) => {
-  localStorage.setItem('credentials', JSON.stringify(user));
+export const storeUser = (user) => {
+  localStorage.setItem("credentials", JSON.stringify(user));
 };

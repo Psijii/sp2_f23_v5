@@ -9,12 +9,12 @@
  * // Returns '<div class="carousel-item"><img src="image.jpg" alt="Sample Image" onerror="this.src='./assets/img/placeholder.jpg'" /></div>'
  * const slideMarkup = createSlide('image.jpg', 'Sample Image');
  */
- export const createSlide = (img, title) => {
-  /**
-   * HTML markup for a carousel slide with an image and title.
-   * @type {string}
-   */
+export const createSlide = (img, title) => {
+  const escapedTitle = title.replace(/[A-Z]/g, "\\$&");
   return `<div class="carousel-item">
-      <img src=${img} alt=${title}  onerror="this.src='./assets/img/placeholder.jpg'" />
+      <img src="${img}" alt="${escapedTitle}" onerror="this.src='./assets/img/placeholder.jpg'" />
+      <div class="carousel-caption">
+        <h2>${escapedTitle}</h2>
+      </div>
     </div>`;
 };

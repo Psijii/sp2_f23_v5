@@ -3,6 +3,6 @@
  *
  * @returns {Object | null} The error object if available, or null if not found.
  */
- export const getError = () => {
-  return JSON.parse(localStorage.getItem('error'));
+export const getError = () => {
+  return JSON.parse(localStorage.getItem("error"));
 };

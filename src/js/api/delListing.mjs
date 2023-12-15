@@ -1,7 +1,4 @@
-import { 
-  apiCall, 
-  options 
-} from './index.js';
+import { apiCall, options } from "./index.js";
 
 /**
  * Deletes a listing using the specified ID.
@@ -15,6 +12,6 @@ import {
  */
 export const deleteListing = async (id) => {
   const url = `https://api.noroff.dev/api/v1/auction/listings/${id}`;
-  const method = 'delete';
+  const method = "delete";
   return await apiCall(url, options(method));
 };

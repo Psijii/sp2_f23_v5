@@ -1,12 +1,12 @@
-import { timeLeft, isLoggedIn } from './index.js';
-import { getUser } from '../storage/index.js';
+import { timeLeft, isLoggedIn } from "./index.js";
+import { getUser } from "../storage/index.js";
 
 //Creating jsdocs for this broke the code, so I'm leaving it out for now
 
 // Function to create information for a listing
 export const createInfo = (listing) => {
   // Get user details or set an empty object if not logged in
-  const { email: userEmail, credits } = getUser() || { email: '' };
+  const { email: userEmail, credits } = getUser() || { email: "" };
 
   const {
     title,
@@ -20,16 +20,18 @@ export const createInfo = (listing) => {
   let sortedBids = bids.sort((a, b) => a.amount - b.amount);
 
   // Determine the current bid amount
-  const currentBid = sortedBids.length ? sortedBids[sortedBids.length - 1].amount : 0;
+  const currentBid = sortedBids.length
+    ? sortedBids[sortedBids.length - 1].amount
+    : 0;
 
   // Function to determine if bid form should be active or disabled
   const disabled = () => {
     if (!isLoggedIn()) {
-      return 'disabled';
+      return "disabled";
     } else if (userEmail === sellerEmail || credits <= currentBid) {
-      return 'disabled';
+      return "disabled";
     } else {
-      return '';
+      return "";
     }
   };
 
@@ -37,7 +39,7 @@ export const createInfo = (listing) => {
   const bidOption = () => {
     if (isLoggedIn() && userEmail !== sellerEmail) {
       return `<p class="mt-3">Available credits: ${credits} Nkr.</p> ${
-        disabled() ? '<p>(Insufficient funds)</p>' : ''
+        disabled() ? "<p>(Insufficient funds)</p>" : ""
       }`;
     } else if (!isLoggedIn()) {
       return `        
@@ -46,7 +48,7 @@ export const createInfo = (listing) => {
           <a href="./register.html">register</a> to place a bid
         </p>`;
     } else {
-      return ``;
+      return "";
     }
   };
 
@@ -59,8 +61,7 @@ export const createInfo = (listing) => {
     } else {
       return ` 
       <form class="d-flex bid-form">
-      <input ${disabled()} type="number" class="form-control" name="amount" id="bid" aria-describedby="emailHelp" required value=${currentBid + 1} min=${currentBid + 1}>
-
+      <input ${disabled()} type="number" class="form-control" name="amount" id="bid" aria-describedby="emailHelp" required value=${ currentBid + 1 } min=${currentBid + 1}>
       <button type="submit" ${disabled()} class="btn btn-secondary">Place bid</button>
       </form>
       ${bidOption()}
@@ -71,7 +72,7 @@ export const createInfo = (listing) => {
   // Return the HTML structure for listing information
   return ` <div>
                 <h1 class="h2 title mb-2">${title}</h1>
-                <p class="description mb-5">${description || 'No description available'}</p>
+                <p class="description mb-5">${ description || "No description available" }</p>
             </div>
             <div>
             <div class="row align-items-end">

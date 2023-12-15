@@ -1,4 +1,4 @@
-import { getUser } from '../storage/index.js';
+import { getUser } from "../storage/index.js";
 
 /**
  * Checks if a user is currently logged in.

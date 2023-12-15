@@ -8,7 +8,7 @@
  * // Returns '<p class="text-danger">Error: Invalid input</p>'
  * const errorMessage = errorHtml('Error: Invalid input');
  */
- export const errorHtml = (message) => {
+export const errorHtml = (message) => {
   /**
    * HTML markup for displaying an error message with red text.
    * @type {string}

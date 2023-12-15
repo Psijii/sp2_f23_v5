@@ -1,5 +1,5 @@
-import { getUser } from '../storage/index.js';
-import { isLoggedIn } from '../components/index.js';
+import { getUser } from "../storage/index.js";
+import { isLoggedIn } from "../components/index.js";
 
 /**
  * Generates options for making API requests.
@@ -10,14 +10,14 @@ import { isLoggedIn } from '../components/index.js';
  * @throws {Error} - If an invalid HTTP method is provided.
  */
 export const options = (method, body) => {
-  const token = isLoggedIn() ? getUser().accessToken : '';
+  const token = isLoggedIn() ? getUser().accessToken : "";
 
   /**
    * Headers object with content type and authorization headers.
    * @type {Object}
    */
   const headers = {
-    'Content-type': 'application/json',
+    "Content-type": "application/json",
     Authorization: `Bearer ${token}`,
   };
 

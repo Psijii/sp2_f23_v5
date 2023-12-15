@@ -9,7 +9,7 @@
  * // Makes an API call to retrieve data
  * const responseData = await apiCall('https://api.example.com/data', { method: 'get' });
  */
- export const apiCall = async (url, options) => {
+export const apiCall = async (url, options) => {
   const response = await fetch(url, options);
 
   if (response.ok) {
@@ -17,7 +17,7 @@
   }
 
   const errorObject = await response.json();
-  localStorage.setItem('error', JSON.stringify(errorObject));
+  localStorage.setItem("error", JSON.stringify(errorObject));
 
   throw new Error(`${response.status} ${response.statusText}`);
 };

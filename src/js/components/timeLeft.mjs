@@ -8,7 +8,7 @@
  * // Returns '<span class="fw-bold">2 days</span>'
  * const result = timeLeft('2023-12-31T00:00:00');
  */
- export const timeLeft = (time) => {
+export const timeLeft = (time) => {
   const now = new Date().getTime();
   const then = new Date(time).getTime();
   const timeDiff = then - now;
@@ -18,11 +18,11 @@
    * @type {Array<Object>}
    */
   const timeUnits = [
-    { unit: 'week', divisor: 7 * 24 * 60 * 60 * 1000 },
-    { unit: 'day', divisor: 24 * 60 * 60 * 1000 },
-    { unit: 'hour', divisor: 60 * 60 * 1000 },
-    { unit: 'minute', divisor: 60 * 1000 },
-    { unit: 'second', divisor: 1000 },
+    { unit: "week", divisor: 7 * 24 * 60 * 60 * 1000 },
+    { unit: "day", divisor: 24 * 60 * 60 * 1000 },
+    { unit: "hour", divisor: 60 * 60 * 1000 },
+    { unit: "minute", divisor: 60 * 1000 },
+    { unit: "second", divisor: 1000 },
   ];
 
   /**
@@ -33,12 +33,12 @@
     const unitValue = timeDiff / divisor;
     if (unitValue >= 1) {
       return `<span class="fw-bold">${Math.ceil(unitValue)} ${unit}${
-        unitValue >= 2 ? 's' : ''
+        unitValue >= 2 ? "s" : ""
       }</span>`;
     }
   }
 
   // Return 'Finished' if the time has passed
+  // eslint-disable-next-line quotes
   return '<span class="fw-bold">Finished</span>';
 };
-

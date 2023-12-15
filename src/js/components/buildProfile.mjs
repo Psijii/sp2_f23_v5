@@ -12,7 +12,7 @@
  * // Returns HTML markup for displaying a user profile
  * const profileMarkup = createProfile({ name: 'John Doe', avatar: 'avatar.jpg', credits: 100, wins: [1, 2, 3] });
  */
- export const createProfile = (profile) => {
+export const createProfile = (profile) => {
   /**
    * The name of the user.
    * @type {string}

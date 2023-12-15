@@ -12,8 +12,8 @@
         // Indentation with 2 spaces
         "indent": ["error", 2],
     
-        // Use single quotes for strings
-        "quotes": ["error", "single"],
+        // Use double quotes for strings
+        "quotes": ["error", "double"],
     
         // Semicolons at the end of statements
         "semi": ["error", "always"],

@@ -23,11 +23,12 @@ export const updateProfile = async (body, name) => {
    * The HTTP method for the profile update request.
    * @type {string}
    */
-  const method = 'put';
+  const method = "put";
 
   /**
    * Sends a PUT request to update the user profile with the provided information.
    * @type {Promise}
    */
+  // eslint-disable-next-line no-undef
   return await apiCall(url, options(method, body));
 };

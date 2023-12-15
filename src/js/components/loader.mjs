@@ -7,7 +7,7 @@
  * // Returns '<div class="spinner-border text-primary m-auto" role="status"><span class="visually-hidden">Loading...</span></div>'
  * const loaderMarkup = setLoader();
  */
- export const setLoader = () => {
+export const setLoader = () => {
   /**
    * HTML markup for a loading spinner.
    * @type {string}
