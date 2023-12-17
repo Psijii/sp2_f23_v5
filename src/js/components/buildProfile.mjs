@@ -29,7 +29,7 @@ export const createProfile = (profile) => {
               class="align-self-center img-thumbnail mb-3 rounded-circle profile-image"
               onerror="this.src='./assets/img/avatar_placeholder.png'" alt="Placeholder image"/>
             <a class="a edit-avatar-open mb-2">Edit Avatar</a>
-            <h1 class="h2 w-100 text-center">${name}</h1>
+            <h1>${name}</h1>
             <div class="d-flex  align-items-start justify-content-between w-100 p-3 mt-4">
               <p>Available credits: $${credits}</p>
               <p>Auctions won: ${wins.length}</p>

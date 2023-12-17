@@ -23946,8 +23946,12 @@ html, body {
 
 body {
   font-family: "Libre Franklin", sans-serif;
-  color: #010924;
+  color: #ededed;
   background-color: #010924;
+}
+body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body p {
+  font-family: "Libre Franklin", sans-serif;
+  color: #ededed;
 }
 
 i {
@@ -23960,20 +23964,6 @@ i {
   color: #ededed;
 }
 
-@media (max-width: 767px) {
-  h1, .h1 {
-    font-size: 50px;
-  }
-  h2, .h2 {
-    font-size: 37px;
-  }
-  h3, .h3 {
-    font-size: 28px;
-  }
-  h4, .h4 {
-    font-size: 21px;
-  }
-}
 a, .a {
   color: #e5a037;
   text-decoration: underline;

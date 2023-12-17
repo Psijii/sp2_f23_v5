@@ -12,9 +12,6 @@
 export const createSlide = (img, title) => {
   const escapedTitle = title.replace(/[A-Z]/g, "\\$&");
   return `<div class="carousel-item">
-      <img src="${img}" alt="${escapedTitle}" onerror="this.src='./assets/img/placeholder.jpg'" />
-      <div class="carousel-caption">
-        <h2>${escapedTitle}</h2>
-      </div>
-    </div>`;
+      <img src="${img}" alt="${escapedTitle}" onerror="this.src='./assets/img/placeholder.jpg'">
+      </div>`;
 };

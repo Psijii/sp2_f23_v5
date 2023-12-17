@@ -71,8 +71,8 @@ export const createInfo = (listing) => {
 
   // Return the HTML structure for listing information
   return ` <div>
-                <h1 class="h2 title mb-2">${title}</h1>
-                <p class="description mb-5">${ description || "No description available" }</p>
+                <h1>${title}</h1>
+                <p class="description mb-5">${description || "No description available"}</p>
             </div>
             <div>
             <div class="row align-items-end">

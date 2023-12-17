@@ -16,8 +16,12 @@ html, body {
 
 body {
   font-family: 'Libre Franklin', sans-serif;
-  color: $dark;
+  color: $white;
   background-color: $dark;
+  h1, h2, h3, h4, p {
+    font-family: 'Libre Franklin', sans-serif;
+    color: $white;
+  }
 }
 
 i {
@@ -31,14 +35,6 @@ i {
   color: $white;
   }
 
-
-// Responsive typography
-@media (max-width: 767px) {
-  h1, .h1 { font-size: 50px; }
-  h2, .h2 { font-size: 37px; }
-  h3, .h3 { font-size: 28px; }
-  h4, .h4 { font-size: 21px; }
-}
 
 // Link styles
 a, .a {
