@@ -59,13 +59,13 @@ To check formatting without modifying files:
 
 ![Style Guide](styleguide.png)
 
-Include a brief description or instructions for the style guide.
+Style guide is used as a guideline for the colours, fonts, placeholders, cards and similar items.
 
 ### Prototype
 
 ![Prototype](prototype.png)
 
-Include a brief description or instructions for the prototype.
+The prototype is just a prototype, and the final design will not be 100% exact match as the prototype.
 
 ### Project Management
 
